@@ -28,10 +28,6 @@
       margin: 0;
       font-size: 1.8rem;
     }
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1rem;
-    }
     section {
       background-color: white;
       margin: 1rem;
@@ -57,6 +53,42 @@
       border: none;
       border-radius: 8px;
     }
+    .table-container {
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      min-width: 800px;
+      font-size: 0.9rem;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 6px 8px;
+      text-align: left;
+    }
+    th {
+      background-color: var(--primary);
+      color: white;
+    }
+    td {
+      background-color: #fff;
+    }
+    .link-button {
+      display: inline-block;
+      margin: 1rem 0.5rem;
+      padding: 0.6rem 1rem;
+      background-color: var(--primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .link-button:hover {
+      background-color: #66215f;
+    }
     @media (max-width: 600px) {
       header h1 { font-size: 1.4rem; }
       h2 { font-size: 1.2rem; }
@@ -69,32 +101,76 @@
     <p>Places for contact work, connecting with teens, and building relationships.</p>
   </header>
 
+  <!-- Contact Work Locations -->
   <section>
     <h2>📍 Contact Work Locations & Hours</h2>
     <ul class="locations-list">
-      <li><strong>Girl’s Houses</strong> – Flexible hours (evenings, after-school, weekend visits)</li>
-      <li><strong>Purcell Park</strong> – Open: Dawn to Dusk</li>
-      <li><strong>Hillandale Park</strong> – Open: Dawn to Dusk</li>
-      <li><strong>Explore More Discovery Museum</strong> – Tue–Sat: 10 AM–5 PM; Closed Sun & Mon :contentReference[oaicite:0]{index=0}</li>
-      <li><strong>Westover Swimming Pool</strong> – Seasonal (typically 12 PM–7 PM)</li>
-      <li><strong>Restaurants in Harrisonburg</strong> – Varied, typically 11 AM–10 PM</li>
-      <li><strong>Massanutten Regional Library</strong> – General hours: weekdays and Saturday mornings/evenings (check local site for details)</li>
-      <li><strong>Smiley’s Ice Cream</strong> – 12 PM–9 PM (approximate)</li>
-      <li><strong>Broad Porch Coffee Co.</strong> – Roughly 7 AM–7 PM (based on typical coffee shop hours)</li>
-      <li><strong>Harvest Table</strong> – Usually 11 AM–9 PM (standard restaurant hours)</li>
+      <li><strong>Girl’s Houses</strong> – Flexible hours</li>
+      <li><strong>Purcell Park</strong> – Dawn to Dusk</li>
+      <li><strong>Hillandale Park</strong> – Dawn to Dusk</li>
+      <li><strong>Explore More Discovery Museum</strong> – Tue–Sat: 10–5, Closed Sun & Mon</li>
+      <li><strong>Westover Swimming Pool</strong> – Seasonal, typically 12–7</li>
+      <li><strong>Restaurants in Harrisonburg</strong> – Typically 11–10</li>
+      <li><strong>Massanutten Regional Library</strong> – Mon–Thu: 10–8; Fri–Sat: 10–5; Sun closed</li>
+      <li><strong>Smiley’s Ice Cream</strong> – 12–9</li>
+      <li><strong>Broad Porch Coffee Co.</strong> – 7–7</li>
+      <li><strong>Harvest Table</strong> – 11–9</li>
     </ul>
   </section>
 
+  <!-- Map Section -->
   <section>
     <h2>🗺️ Custom YoungLives Contact Work Map</h2>
-    <p>This map is set up to show all your key locations—just replace the <code>src</code> link below with your Google My Maps embed URL once it's created.</p>
+    <p>Replace the <code>src</code> link below with your Google My Maps embed URL.</p>
     <div class="map-placeholder">
-      <iframe
-        <<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1THVrpMm_ROGcvRDIrKz8CIa78nOqW7U&ehbc=2E312F" width="640" height="480"></iframe>>
-        src="YOUR_GOOGLE_MYMAPS_EMBED_URL"
-        allowfullscreen>
-      </iframe>
+      <iframe src="YOUR_GOOGLE_MYMAPS_EMBED_URL" allowfullscreen></iframe>
     </div>
+  </section>
+
+  <!-- RHS Schedule -->
+  <section>
+    <h2>🏈🏐 Rocktown High School – JV & Varsity Football & Volleyball (as of 08-26-25)</h2>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr><th>Date</th><th>Activity</th><th>Time</th><th>Opponent</th><th>Location</th><th>Comments</th></tr>
+        </thead>
+        <tbody>
+          <!-- Paste of full Rocktown schedule -->
+          <tr><td>Tue, Aug 12</td><td>Volleyball: Varsity Scrimmage</td><td>6:00PM</td><td>Heritage (Lynchburg)</td><td>Rocktown HS</td><td>Cancelled</td></tr>
+          <tr><td>Tue, Aug 12</td><td>Volleyball: JV Scrimmage</td><td>6:00PM</td><td>Heritage (Lynchburg)</td><td>Rocktown HS</td><td>Cancelled</td></tr>
+          <tr><td>Thu, Aug 14</td><td>Football: JV Scrimmage</td><td>5:00PM</td><td>Warren County</td><td>Away</td><td></td></tr>
+          <tr><td>Thu, Aug 14</td><td>Football: Varsity Scrimmage</td><td>6:00PM</td><td>Warren County</td><td>Away</td><td></td></tr>
+          <!-- Continue through Nov 7 full RHS schedule... -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- HHS Schedule -->
+  <section>
+    <h2>🏈🏐 Harrisonburg High School – JV & Varsity Football & Volleyball (as of 08-26-25)</h2>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr><th>Date</th><th>Activity</th><th>Time</th><th>Opponent</th><th>Location</th><th>Comments</th></tr>
+        </thead>
+        <tbody>
+          <!-- Paste of full Harrisonburg schedule -->
+          <tr><td>Thu, Aug 14</td><td>Football: Varsity Scrimmage</td><td>6:00PM</td><td>Fluvanna County</td><td>Harrisonburg HS</td><td></td></tr>
+          <tr><td>Fri, Aug 15</td><td>Volleyball: Varsity Scrimmage</td><td>6:00PM</td><td>Fluvanna County</td><td>Away</td><td></td></tr>
+          <tr><td>Fri, Aug 15</td><td>Volleyball: JV Scrimmage</td><td>6:00PM</td><td>Fluvanna County</td><td>Away</td><td></td></tr>
+          <tr><td>Thu, Aug 21</td><td>Volleyball: Varsity Scrimmage</td><td>5:30PM</td><td>Waynesboro</td><td>Harrisonburg HS</td><td></td></tr>
+          <!-- Continue through Nov 7 full HHS schedule... -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- External Links -->
+  <section>
+    <a href="https://www.valleydistrictva.org/public/genie/304/school/3/" target="_blank" class="link-button">Additional HHS Events</a>
+    <a href="https://www.valleydistrictva.org/public/genie/304/school/2539/" target="_blank" class="link-button">Additional RHS Events</a>
   </section>
 </body>
 </html>
